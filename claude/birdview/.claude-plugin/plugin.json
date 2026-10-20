@@ -1,0 +1,18 @@
+{
+  "name": "birdview",
+  "displayName": "Birdview PSA",
+  "version": "0.1.0",
+  "description": "Connect Claude to your Birdview PSA account: search and update projects, tasks, time logs, customers, resources and financials.",
+  "author": { "name": "Birdview PSA", "url": "https://birdviewpsa.com" },
+  "homepage": "https://github.com/LogicSoftware/birdview-ai-plugins",
+  "repository": "https://github.com/LogicSoftware/birdview-ai-plugins",
+  "keywords": ["birdview", "psa", "project-management", "time-tracking", "mcp"],
+  "userConfig": {
+    "tenant": {
+      "type": "string",
+      "title": "Birdview account",
+      "description": "Your Birdview subdomain, e.g. 'acme' for https://acme.go.easyprojects.net",
+      "required": true
+    }
+  }
+}

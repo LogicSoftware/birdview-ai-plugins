@@ -1,0 +1,12 @@
+{
+  "name": "birdview-psa",
+  "description": "Birdview PSA plugins and connectors for AI assistants",
+  "owner": { "name": "Birdview PSA", "url": "https://birdviewpsa.com" },
+  "plugins": [
+    {
+      "name": "birdview",
+      "source": "./claude/birdview",
+      "description": "Birdview PSA MCP connector for Claude"
+    }
+  ]
+}
