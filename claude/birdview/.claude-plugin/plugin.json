@@ -5,6 +5,7 @@
   "description": "Connect Claude to your Birdview PSA account: search and update projects, tasks, time logs, customers, resources and financials.",
   "author": { "name": "Birdview PSA", "url": "https://birdviewpsa.com" },
   "homepage": "https://github.com/LogicSoftware/birdview-ai-plugins",
+  "license": "MIT",
   "repository": "https://github.com/LogicSoftware/birdview-ai-plugins",
   "keywords": ["birdview", "psa", "project-management", "time-tracking", "mcp"],
   "userConfig": {
