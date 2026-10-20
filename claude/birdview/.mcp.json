@@ -1,8 +1,0 @@
-{
-  "mcpServers": {
-    "birdview": {
-      "type": "http",
-      "url": "https://${user_config.tenant}.go.easyprojects.net/services/mcp"
-    }
-  }
-}
