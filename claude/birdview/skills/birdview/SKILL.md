@@ -49,4 +49,10 @@ Link every project and task you mention to Birdview. Take `appUrl` from `birdvie
 - Project: `{appUrl}/activities/project/{projectId}`
 - Task: `{appUrl}/activities/activity/{taskId}`
 
-Use them as Markdown links on the item name, e.g. `[Website redesign](https://acme.go.easyprojects.net/activities/project/8)`. If `who_am_i` returns no `appUrl`, leave the names unlinked; don't guess the domain.
+Put the link on the item's name: `[Website redesign](https://acme.go.easyprojects.net/activities/project/8)`. Never show a bare URL, an ID-only link text ("#8", "link", "open") or a separate link column. In tables, the name cell is the link:
+
+| Task | Owner | Due | Status |
+|------|-------|-----|--------|
+| [Kickoff meeting](https://acme.go.easyprojects.net/activities/activity/49) | Maria Lee | Oct 24 | In progress |
+
+If `who_am_i` returns no `appUrl`, leave the names unlinked; don't guess the domain.
