@@ -17,6 +17,16 @@ The Birdview connector isn't connected yet. Tell the user to open the Birdview P
 - Prefer the composite tools for overviews: `birdview_get_my_work`, `birdview_get_project_health`, `birdview_get_project_context`, `birdview_get_task_context`, `birdview_get_user_workload`, `birdview_get_team_availability`.
 - Search results are paged. When `hasMore` is true, call again with `skip` = `nextSkip` instead of assuming the list is complete.
 
+## Names to IDs
+
+Users name things ("project Atlas", "the onboarding task", "Maria"); tools take IDs.
+
+- Search first (`birdview_search_projects`, `birdview_search_tasks`, `birdview_list_users`, `birdview_list_customers`) and use the ID from the result.
+- Exactly one match: use it, and name it in the reply so the user can spot a wrong pick.
+- Several matches: list them (name plus a distinguishing field such as project, customer or dates) and ask which one. Don't pick one yourself.
+- No match: say so and ask; don't create a new item instead.
+- Never guess or reuse an ID that didn't come from a tool result in this conversation.
+
 ## Changing data
 
 - Confirm with the user before creating, updating or deleting anything, and say what will change.
@@ -27,3 +37,16 @@ The Birdview connector isn't connected yet. Tell the user to open the Birdview P
 ## Replies
 
 Summarize results in plain language with the key fields (name, owner, dates, hours, status). Don't paste raw tool output.
+
+Link every project and task you mention to Birdview. Take `appUrl` from `birdview_who_am_i` (call it once per conversation) and build:
+
+- Project: `{appUrl}/activities/project/{projectId}`
+- Task: `{appUrl}/activities/activity/{taskId}`
+
+Put the link on the item's name: `[Website redesign](https://acme.go.easyprojects.net/activities/project/8)`. Never show a bare URL, an ID-only link text ("#8", "link", "open") or a separate link column. In tables, the name cell is the link:
+
+| Task | Owner | Due | Status |
+|------|-------|-----|--------|
+| [Kickoff meeting](https://acme.go.easyprojects.net/activities/activity/49) | Maria Lee | Oct 24 | In progress |
+
+If `who_am_i` returns no `appUrl`, leave the names unlinked; don't guess the domain.
