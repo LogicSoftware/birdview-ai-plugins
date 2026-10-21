@@ -9,13 +9,7 @@ Use the Birdview connector's `birdview_*` tools. They act as the signed-in user,
 
 ## If the tools are missing
 
-The connector isn't connected yet. Tell the user to add it under **Settings > Connectors > Add custom connector** with their account URL:
-
-```
-https://<account>.go.easyprojects.net/services/mcp
-```
-
-`<account>` is the subdomain they use to open Birdview. They then sign in with their Birdview account.
+The Birdview connector isn't connected yet. Tell the user to open the Birdview PSA plugin's **Connectors** tab (**Customize > Plugins > Birdview PSA**) and select **Connect**. On the Birdview page they enter their account name (the subdomain they use to open Birdview, e.g. `acme` for `acme.go.easyprojects.net`) and sign in.
 
 ## Reading
 

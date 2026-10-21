@@ -12,23 +12,23 @@ One folder per AI tool:
 ## MCP server
 
 ```
-https://<your-account>.go.easyprojects.net/services/mcp
+https://mcp.go.easyprojects.net/services/mcp
 ```
 
-Each person signs in with their own Birdview account through OAuth. Claude can only see and change
-what that user is allowed to in Birdview. The plugin itself contains no credentials.
+One URL for every Birdview account. When you connect, Birdview asks for your account name (the
+subdomain you use to open Birdview, e.g. `acme`) and you sign in with your own Birdview account
+through OAuth. Claude can only see and change what that user is allowed to in Birdview. The plugin
+itself contains no credentials.
 
 ## Claude (claude.ai and Cowork)
 
-1. **Connect Birdview.** In Claude, open **Settings > Connectors > Add custom connector**, enter your
-   account URL (above) and sign in with your Birdview account.
-2. **Install the plugin.** Open **Customize > Plugins > Add > Add marketplace**, enter
-   `LogicSoftware/birdview-ai-plugins`, then install **Birdview PSA**. The plugin adds a skill that
-   tells Claude how to use the connector: paging, confirming changes, dry-running bulk edits and
-   reporting unsupported operations.
+1. **Install the plugin.** Open **Customize > Plugins > Add > Add marketplace**, enter
+   `LogicSoftware/birdview-ai-plugins`, then install **Birdview PSA**.
+2. **Connect Birdview.** On the plugin's **Connectors** tab, select **Connect**, enter your account
+   name and sign in.
 
-The connector URL depends on your account, so the plugin doesn't include it. Claude asks you to
-connect it if it's missing.
+The plugin bundles the Birdview connector and a skill that tells Claude how to use it: paging,
+confirming changes, dry-running bulk edits and reporting unsupported operations.
 
 ## What the connector can do
 
