@@ -1,7 +1,7 @@
 {
   "name": "birdview",
   "displayName": "Birdview PSA",
-  "version": "0.2.0",
+  "version": "0.1.0",
   "description": "Work with Birdview PSA from Claude: projects, tasks, time logs, customers, resources and financials through the Birdview connector.",
   "author": {
     "name": "Birdview PSA",
