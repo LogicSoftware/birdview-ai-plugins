@@ -5,7 +5,7 @@ One folder per AI tool:
 
 | Folder | Tool | Status |
 |--------|------|--------|
-| [`claude/birdview`](claude/birdview) | Claude (plugin) | Available |
+| [`plugins/birdview`](plugins/birdview) | Claude (plugin) | Available |
 | `chatgpt/` | ChatGPT | Planned |
 | `copilot/` | GitHub / Microsoft Copilot | Planned |
 
