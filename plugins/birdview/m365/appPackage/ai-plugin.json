@@ -4,7 +4,7 @@
     "name_for_human": "Birdview PSA",
     "description_for_human": "Read and update Birdview PSA projects, tasks, time logs, customers and workload as the signed-in Birdview user.",
     "description_for_model": "Birdview PSA (formerly Easy Projects) project and professional-services data for the signed-in user: projects, tasks, time logs, workload, team availability and time off, customers, portfolios, expenses and payments. Use it to search and summarize this data, and to create or update tasks, projects, time logs, customers and custom fields.",
-    "contact_email": "publisher-email@example.com",
+    "contact_email": "info@birdviewpsa.com",
     "namespace": "birdview",
     "functions": [],
     "runtimes": [
