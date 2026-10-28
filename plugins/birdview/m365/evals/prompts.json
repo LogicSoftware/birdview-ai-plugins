@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "1.2.0",
+  "default_evaluators": {
+    "Relevance": {},
+    "Coherence": {}
+  },
+  "items": [
+    { "prompt": "Who am I in Birdview?" },
+    { "prompt": "What are my assignments this week?" }
+  ]
+}

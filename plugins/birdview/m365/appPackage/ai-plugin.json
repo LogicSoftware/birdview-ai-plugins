@@ -1,0 +1,24 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/copilot/plugin/v2.4/schema.json",
+    "schema_version": "v2.4",
+    "name_for_human": "Birdview PSA",
+    "description_for_human": "Read and update Birdview PSA projects, tasks, time logs, customers and workload as the signed-in Birdview user.",
+    "contact_email": "publisher-email@example.com",
+    "namespace": "birdview",
+    "functions": [],
+    "runtimes": [
+        {
+            "type": "RemoteMCPServer",
+            "spec": {
+                "url": "${{BIRDVIEW_MCP_ORIGIN}}/services/mcp"
+            },
+            "run_for_functions": [
+                "*"
+            ],
+            "auth": {
+                "type": "OAuthPluginVault",
+                "reference_id": "${{BIRDVIEW_OAUTH_AUTH_ID}}"
+            }
+        }
+    ]
+}

@@ -8,9 +8,11 @@ manifest, and they share the connector URL and the skill:
 |------|----------|------------|-------------|--------|
 | Claude | `.claude-plugin/plugin.json` | `.mcp.json` | `.claude-plugin/marketplace.json` | Available |
 | ChatGPT / Codex | `plugin.json` | `mcp.json` | `.agents/plugins/marketplace.json` | Testing |
-| GitHub / Microsoft Copilot | | | | Planned |
+| Microsoft 365 Copilot | `m365/appPackage/manifest.json` | `m365/appPackage/ai-plugin.json` | | Testing |
+| GitHub Copilot | | | | Planned |
 
-Edit the skill in `plugins/birdview/skills/` once; every tool picks it up.
+Edit the skill in `plugins/birdview/skills/` once; Claude, ChatGPT and Codex pick it up. Microsoft 365
+Copilot keeps a copy in `m365/appPackage/instruction.txt` (see [`plugins/birdview/m365`](plugins/birdview/m365)).
 
 ## MCP server
 

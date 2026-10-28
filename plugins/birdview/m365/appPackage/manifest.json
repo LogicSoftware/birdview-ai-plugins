@@ -1,0 +1,40 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.30/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.30",
+    "version": "1.0.0",
+    "id": "${{TEAMS_APP_ID}}",
+    "developer": {
+        "name": "Birdview PSA",
+        "websiteUrl": "https://birdviewpsa.com",
+        "privacyUrl": "https://birdviewpsa.com/company/privacy/",
+        "termsOfUseUrl": "https://birdviewpsa.com/company/hosting-agreement/"
+    },
+    "icons": {
+        "color": "color.png",
+        "outline": "outline.png"
+    },
+    "name": {
+        "short": "Birdview PSA${{APP_NAME_SUFFIX}}",
+        "full": "Birdview PSA"
+    },
+    "description": {
+        "short": "Work with your Birdview PSA data in Copilot.",
+        "full": "Ask about your Birdview PSA projects, tasks, time logs, workload, team availability, PTO, customers, portfolios, expenses and payments, or create and update tasks, projects, time logs and customers. Copilot acts as the Birdview user you sign in with and sees only what that user may see."
+    },
+    "accentColor": "#FFFFFF",
+    "supportsChannelFeatures": "tier1",
+    "composeExtensions": [],
+    "copilotAgents": {
+        "declarativeAgents": [
+            {
+                "id": "declarativeAgent",
+                "file": "declarativeAgent.json"
+            }
+        ]
+    },
+    "permissions": [
+        "identity",
+        "messageTeamMembers"
+    ],
+    "validDomains": []
+}
