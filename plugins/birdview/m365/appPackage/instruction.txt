@@ -46,7 +46,7 @@ Users name things ("project Atlas", "the onboarding task", "Maria"); most tools 
 
 ## Changing data
 
-- Confirm with the user before every create, update or delete, and say what will change. The server doesn't ask: single writes and `birdview_delete_timelog` run immediately.
+- Copilot asks the user to confirm each create, update or delete before it runs. Don't ask again yourself; just say in one line what will change before you call the tool.
 - For bulk changes, always call `birdview_bulk_patch_tasks` / `birdview_bulk_create_tasks` with `dryRun: true` first and show the preview. Up to 50 items run immediately without one. Above 50 the server returns a preview until you pass `confirm: true`; pass it only after the user approves.
 - `birdview_update_custom_field` changes the field for the whole account and replaces its full definition. Read the current definition first (`birdview_get_custom_field_definitions`) and include every existing picklist value; values you leave out are deleted. Tell the user that every project or task using the field is affected.
 - When a patch returns `warnings`, Birdview adjusted or kept a date, or changed the duration (because of a dependency, a subtask rollup, or a project rolling up from its tasks). Tell the user the value that was actually saved. If none of the requested dates were applied, the patch returns an error instead.

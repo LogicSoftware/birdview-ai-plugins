@@ -21,7 +21,7 @@
         "short": "Work with your Birdview PSA data in Copilot.",
         "full": "Ask about your Birdview PSA projects, tasks, time logs, workload, team availability, PTO, customers, portfolios, expenses and payments, or create and update tasks, projects, time logs and customers. Copilot acts as the Birdview user you sign in with and sees only what that user may see."
     },
-    "accentColor": "#FFFFFF",
+    "accentColor": "#6955ED",
     "supportsChannelFeatures": "tier1",
     "composeExtensions": [],
     "copilotAgents": {
@@ -32,9 +32,6 @@
             }
         ]
     },
-    "permissions": [
-        "identity",
-        "messageTeamMembers"
-    ],
+    "permissions": [],
     "validDomains": []
 }

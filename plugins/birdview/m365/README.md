@@ -14,7 +14,10 @@ anything: each user selects **Sign in**, enters the Birdview account name and si
 ## Files
 
 - `appPackage/instruction.txt`: the agent's instructions, made from `../skills/birdview/SKILL.md` without
-  the Claude-specific parts. Copilot allows 8,000 characters. Update it when the skill changes.
+  the Claude-specific parts. Copilot already confirms every write, so the instructions don't ask for a
+  second confirmation. Copilot allows 8,000 characters. Update it when the skill changes.
+- `appPackage/manifest.json`: raise `version` before each publish to the org catalog or the store;
+  an update with the same version isn't accepted.
 - `appPackage/ai-plugin.json`: the MCP action; the server URL comes from `BIRDVIEW_MCP_ORIGIN`.
 - `env/.env.<env>.sample`: settings per environment. `dev` is `mcp.dev.dev.logicsoftware.net`, `prod` is
   `mcp.go.easyprojects.net`.
