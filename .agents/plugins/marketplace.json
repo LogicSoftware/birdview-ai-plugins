@@ -1,0 +1,12 @@
+{
+  "name": "birdview-psa",
+  "interface": { "displayName": "Birdview PSA" },
+  "plugins": [
+    {
+      "name": "birdview",
+      "source": { "source": "local", "path": "./plugins/birdview" },
+      "policy": { "installation": "AVAILABLE", "authentication": "ON_INSTALL" },
+      "category": "Productivity"
+    }
+  ]
+}
