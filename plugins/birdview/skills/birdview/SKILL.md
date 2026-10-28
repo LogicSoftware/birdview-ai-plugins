@@ -26,6 +26,7 @@ On the Birdview page they enter their account name (the subdomain they use to op
 
 ## Reading
 
+- Start with `birdview_who_am_i` when the request depends on who the user is ("my tasks", "my hours").
 - Prefer the composite tools for overviews: `birdview_get_my_work`, `birdview_get_project_health`, `birdview_get_project_context`, `birdview_get_task_context`, `birdview_get_user_workload`, `birdview_get_team_availability`.
 - Only the `birdview_search_*` tools take `skip`. When one returns `hasMore: true`, call it again with `skip` = `nextSkip`. When a `birdview_list_*` tool returns `hasMore: true`, narrow it if you can (only `birdview_list_users` takes `textSearch`), otherwise tell the user the list may be incomplete.
 - The connector decides "open", "completed" and "overdue" itself. A task is completed if it has a completion date or 100% progress, or its workflow status is marked as completed. When a status carries no such mark, the connector falls back to the status name containing "complete", "done" or "closed", so mention this when counts look off.
@@ -76,4 +77,17 @@ For permissions, financial terms and capacity, read `references/concepts.md` whe
 
 ## Replies
 
-Summarize results in plain language with the key fields (name, owner, dates, hours, status). Don't paste raw tool output. Results carry no links to individual projects or tasks (`birdview_who_am_i` returns only the account's base `appUrl`), so identify items by name (task name plus its project) and don't build deep links.
+Summarize results in plain language with the key fields (name, owner, dates, hours, status). Don't paste raw tool output.
+
+Link every project and task you mention to Birdview. Take `appUrl` from `birdview_who_am_i` (call it once per conversation) and build:
+
+- Project: `{appUrl}/activities/project/{projectId}`
+- Task: `{appUrl}/activities/activity/{taskId}`
+
+Put the link on the item's name: `[Website redesign](https://acme.go.easyprojects.net/activities/project/8)`. Never show a bare URL, an ID-only link text ("#8", "link", "open") or a separate link column. In tables, the name cell is the link:
+
+| Task | Owner | Due | Status |
+|------|-------|-----|--------|
+| [Kickoff meeting](https://acme.go.easyprojects.net/activities/activity/49) | Maria Lee | Oct 24 | In progress |
+
+If `who_am_i` returns no `appUrl`, leave the names unlinked; don't guess the domain.
