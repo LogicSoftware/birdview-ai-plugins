@@ -9,7 +9,12 @@ Use the Birdview connector's `birdview_*` tools. They act as the signed-in user,
 
 ## If the tools are missing
 
-The Birdview connector isn't connected yet. Tell the user to open the Birdview PSA plugin's **Connectors** tab (**Customize > Plugins > Birdview PSA**) and select **Connect**. On the Birdview page they enter their account name (the subdomain they use to open Birdview, e.g. `acme` for `acme.go.easyprojects.net`) and sign in.
+The Birdview connector isn't connected yet. Tell the user to connect it in the Birdview PSA plugin:
+
+- Claude: **Customize > Plugins > Birdview PSA**, **Connectors** tab, **Connect**.
+- ChatGPT or Codex: open the Birdview PSA plugin and sign in to its Birdview connector.
+
+On the Birdview page they enter their account name (the subdomain they use to open Birdview, e.g. `acme` for `acme.go.easyprojects.net`) and sign in.
 
 ## Vocabulary
 

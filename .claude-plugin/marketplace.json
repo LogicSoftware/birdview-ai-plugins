@@ -5,8 +5,8 @@
   "plugins": [
     {
       "name": "birdview",
-      "source": "./claude/birdview",
-      "description": "Birdview PSA MCP connector for Claude"
+      "source": "./plugins/birdview",
+      "description": "Birdview PSA MCP connector and skill"
     }
   ]
 }

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "birdview",
+  "version": "0.1.0",
+  "description": "Work with Birdview PSA from ChatGPT: projects, tasks, time logs, customers, resources and financials through the Birdview connector.",
+  "author": {
+    "name": "Birdview PSA",
+    "url": "https://birdviewpsa.com"
+  },
+  "homepage": "https://github.com/LogicSoftware/birdview-ai-plugins",
+  "repository": "https://github.com/LogicSoftware/birdview-ai-plugins",
+  "license": "MIT",
+  "keywords": [
+    "birdview",
+    "psa",
+    "project-management",
+    "time-tracking",
+    "mcp"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Birdview PSA",
+        "shortDescription": "Projects, tasks and time logs in Birdview PSA",
+        "developerName": "Birdview PSA",
+        "category": "Productivity",
+        "websiteURL": "https://birdviewpsa.com"
+      }
+    }
+  }
+}
