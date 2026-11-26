@@ -1,13 +1,18 @@
 {
   "name": "birdview",
   "displayName": "Birdview PSA",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Work with Birdview PSA from Claude: projects, tasks, time logs, customers, resources and financials through the Birdview connector.",
   "author": {
     "name": "Birdview PSA",
     "url": "https://birdviewpsa.com"
   },
   "homepage": "https://github.com/LogicSoftware/birdview-ai-plugins",
+  "icon": "./icon.png",
+  "documentationUrl": "https://help.birdviewpsa.com/hc/en-us/articles/48824607762573-Birdview-MCP",
+  "supportUrl": "https://help.birdviewpsa.com/hc/en-us/requests/new",
+  "privacyPolicyUrl": "https://birdviewpsa.com/company/privacy/",
+  "termsOfServiceUrl": "https://birdviewpsa.com/company/hosting-agreement/",
   "license": "MIT",
   "repository": "https://github.com/LogicSoftware/birdview-ai-plugins",
   "keywords": [
